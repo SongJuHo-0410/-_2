@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 /**
  * 여기에 main 클래스 설명을 작성하십시오.
  * 
@@ -8,14 +9,15 @@ import java.util.*;
 public class main
 {  
     public static void main(String[] args){
+        HashMap<String, Integer> scoreMap = new HashMap<String, Integer>();
         try{
-            Scanner scanner = new Scanner(new FileReader("inputData20191007.txt"));
-
+            Scanner scanner = new Scanner(new FileReader("c:\\Temp\\inputData20191007.txt"));
+            
             int c;
             while(scanner.hasNext())
             {
                 String word = scanner.nextLine();
-                wordVector.add(word);
+                scoreMap.add(word);
             }
             scanner.close();
         } catch(IOException e){
