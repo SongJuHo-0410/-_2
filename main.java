@@ -10,14 +10,15 @@ public class main
 {  
     public static void main(String[] args){
         HashMap<String, Integer> scoreMap = new HashMap<String, Integer>();
+        InputStreamReader in = null;
         try{
             Scanner scanner = new Scanner(new FileReader("c:\\Temp\\inputData20191007.txt"));
-            
             int c;
             while(scanner.hasNext())
             {
-                String word = scanner.nextLine();
-                scoreMap.add(word);
+                String name = scanner.nextLine();
+                String score = name.substring(3);
+                scoreMap.put(name, Integer.parseInt(score));
             }
             scanner.close();
         } catch(IOException e){
